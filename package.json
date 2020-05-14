@@ -4,7 +4,9 @@
   "description": "Validate parameters and properties types, based on typescript decorators",
   "scripts": {
     "test": "jest",
-    "test:cov": "jest --coverage"
+    "test:cov": "jest --coverage",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --project tsconfig.json --fix"
   },
   "keywords": [],
   "author": "Julio Sansossio",

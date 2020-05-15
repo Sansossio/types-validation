@@ -1,5 +1,5 @@
 import { getProperties } from '../../utils/get-properties/get-properties.utils'
-import { validateProperties } from './validator/validate.validator'
+import { validateProperties } from './validator/properties.validator'
 
 export function Validate () {
   return function (target: Object, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {

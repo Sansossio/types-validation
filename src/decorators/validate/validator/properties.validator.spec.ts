@@ -1,8 +1,8 @@
-import { validateProperties } from './validate.validator'
+import { validateProperties } from './properties.validator'
 import { MethodProperty } from '../../../types/method-property/method-property.types'
 import { ValidationException } from '../../../errors/validation-exception.error'
 
-describe('Validate properties', () => {
+describe('Properties validator', () => {
   it('must be defined', () => {
     expect(validateProperties).toBeDefined()
   })

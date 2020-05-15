@@ -11,7 +11,6 @@ export function IsString () {
       validator: isStringValidator,
       key: getParameters(target[propertyKey])[parameterIndex]
     }
-    const key = Reflect.getMetadata('design:paramtypes', target, propertyKey)
     setProperty(registerProperty, target, propertyKey)
   }
 }

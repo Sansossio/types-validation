@@ -1,6 +1,6 @@
 import { validateProperties } from './validate.validator'
-import { MethodProperty } from '../../types/method-property/method-property.types'
-import { ValidationException } from '../../errors/validation-exception.error'
+import { MethodProperty } from '../../../types/method-property/method-property.types'
+import { ValidationException } from '../../../errors/validation-exception.error'
 
 describe('Validate properties', () => {
   it('must be defined', () => {

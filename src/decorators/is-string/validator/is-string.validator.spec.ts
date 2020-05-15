@@ -8,7 +8,7 @@ describe('Validator - IsString', () => {
     expect(isStringValidator({}).valid).toEqual(false)
   })
 
-  it('should reutnr true when vlaue is a string', () => {
+  it('should return true when value is a string', () => {
     expect(isStringValidator('').valid).toEqual(true)
   })
 })

@@ -1,5 +1,7 @@
+import { ValidationResponse } from '../validator/validator.types'
+
 export type MethodProperty = {
-  validator: Function
+  validator: (value) => ValidationResponse
   index: number
   key: string
 }

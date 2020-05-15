@@ -6,7 +6,8 @@
     "test": "jest",
     "test:cov": "jest --coverage",
     "lint": "tslint --project tsconfig.json",
-    "lint:fix": "tslint --project tsconfig.json --fix"
+    "lint:fix": "tslint --project tsconfig.json --fix",
+    "start:test": "tsnd test.ts"
   },
   "keywords": [],
   "author": "Julio Sansossio",

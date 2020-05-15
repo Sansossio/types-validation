@@ -1,3 +1,3 @@
 export const ValidatorsErrorMessages = {
-  IS_STRING: 'Propert "{key}" must be a string'
+  IS_STRING: 'Property "{key}" must be a string'
 }

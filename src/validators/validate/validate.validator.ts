@@ -1,9 +1,9 @@
 import { MethodProperty } from '../../types/method-property/method-property.types'
-import { ValidatorResponse, ValidatorResponseError } from '../../types/validator/validator.types'
+import { ValidatorResponseError } from '../../types/validator/validator.types'
 import { parseMessage } from '../../utils/parse-message/parse-message.utils'
 import { ValidationException } from '../../errors/validation-exception.error'
 
-export function validateProperties (properties: MethodProperty[], args: IArguments): void {
+export function validateProperties (properties: MethodProperty[], args: IArguments | any[]): void {
   const errors: ValidatorResponseError[] = []
   for (const property of properties) {
     const value = args[property.index]

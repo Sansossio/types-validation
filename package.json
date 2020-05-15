@@ -10,7 +10,12 @@
     "lint:fix": "tslint --project tsconfig.json --fix",
     "start:test": "tsnd test.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "class",
+    "validator",
+    "validation",
+    "type validation"
+  ],
   "author": "Julio Sansossio",
   "license": "ISC",
   "dependencies": {

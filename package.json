@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Validate parameters and properties types, based on typescript decorators",
   "scripts": {
+    "build": "tsc",
     "test": "jest",
     "test:cov": "jest --coverage",
     "lint": "tslint --project tsconfig.json",

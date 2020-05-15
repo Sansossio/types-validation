@@ -1,7 +1,4 @@
-export type ValidatorResponseError = {
-  property: string
-  message: string
-}
+import { ValidatorResponseError } from './validator-errors.types'
 
 export type ValidatorResponse = {
   errors: ValidatorResponseError[]

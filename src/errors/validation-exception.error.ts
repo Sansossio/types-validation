@@ -1,4 +1,4 @@
-import { ValidatorResponseError } from '../types/validator/validator.types'
+import { ValidatorResponseError } from '../types/validator/validator-errors.types'
 
 export class ValidationException extends Error {
   message = `Invalid parameters \n ${this.parseErrors()}`

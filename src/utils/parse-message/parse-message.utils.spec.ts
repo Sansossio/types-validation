@@ -19,4 +19,8 @@ describe('Parse message', () => {
     const key2 = 'world'
     expect(parseMessage(message, { key, key2 })).toEqual(key + key2)
   })
+
+  it('should return empty string when message is not string intance', () => {
+    expect(parseMessage(null as any, {})).toEqual('')
+  })
 })

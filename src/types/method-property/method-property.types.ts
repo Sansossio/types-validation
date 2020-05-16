@@ -1,7 +1,7 @@
-import { ValidationResponse } from '../validator/validator.types'
+import { MethodPropertyValidator } from './method-property.validator.types'
 
 export type MethodProperty = {
-  validator: (value) => ValidationResponse
+  validator: MethodPropertyValidator
   index: number
   key: string
 }

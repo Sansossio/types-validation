@@ -1,4 +1,4 @@
-import { getParameters } from './get-parameters.utils'
+import { getParameters } from './get-function-parameters.utils'
 
 describe('Get parameters', () => {
   it('should return parameters name from a function', () => {

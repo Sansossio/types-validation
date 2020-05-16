@@ -1,6 +1,6 @@
 import { MethodPropertyValidator } from '../../types/method-property/method-property.validator.types'
 import { MethodProperty } from '../../types/method-property/method-property.types'
-import { getParameters } from '../../utils/get-parameters/get-parameters.utils'
+import { getParameters } from '../../utils/get-function-parameters/get-function-parameters.utils'
 import { setProperty } from '../../utils/set-property/set-property.utils'
 
 export function baseDecorator (validator: MethodPropertyValidator) {

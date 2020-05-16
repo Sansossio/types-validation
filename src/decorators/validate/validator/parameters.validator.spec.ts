@@ -1,14 +1,14 @@
-import { validateProperties } from './properties.validator'
+import { validateParameters } from './parameters.validator'
 import { MethodProperty } from '../../../types/method-property/method-property.types'
 import { ValidationException } from '../../../errors/validation-exception.error'
 
 describe('Properties validator', () => {
   it('must be defined', () => {
-    expect(validateProperties).toBeDefined()
+    expect(validateParameters).toBeDefined()
   })
 
   it('should return void when properties array is empty', () => {
-    expect(validateProperties([], [])).toEqual(undefined)
+    expect(validateParameters([], [])).toEqual(undefined)
   })
 
   it('should return void when all the properties are valid', () => {
@@ -19,7 +19,7 @@ describe('Properties validator', () => {
         valid: true
       })
     }
-    expect(validateProperties([property], [])).toEqual(undefined)
+    expect(validateParameters([property], [])).toEqual(undefined)
   })
 
   it('should throw validation exception when some of the properties are invalid', () => {
@@ -39,6 +39,6 @@ describe('Properties validator', () => {
         })
       }
     ]
-    expect(() => validateProperties(properties, [])).toThrowError(ValidationException)
+    expect(() => validateParameters(properties, [])).toThrowError(ValidationException)
   })
 })

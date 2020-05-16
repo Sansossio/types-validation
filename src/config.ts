@@ -1,3 +1,3 @@
 export enum Config {
-  GET_PROPERTIES = 'GET_PROPERTIES'
+  GET_PARAMETERS = 'GET_PARAMETERS'
 }

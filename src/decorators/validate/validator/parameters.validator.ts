@@ -3,7 +3,7 @@ import { ValidatorResponseError } from '../../../types/validator/validator-error
 import { parseMessage } from '../../../utils/parse-message/parse-message.utils'
 import { ValidationException } from '../../../errors/validation-exception.error'
 
-export function validateProperties (properties: MethodProperty[], args: IArguments | any[]): void {
+export function validateParameters (properties: MethodProperty[], args: IArguments | any[]): void {
   const errors: ValidatorResponseError[] = []
   for (const property of properties) {
     const value = args[property.index]

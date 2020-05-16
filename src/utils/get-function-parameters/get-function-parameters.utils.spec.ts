@@ -1,9 +1,9 @@
-import { getParameters } from './get-function-parameters.utils'
+import { getFunctionParameters } from './get-function-parameters.utils'
 
 describe('Get parameters', () => {
   it('should return parameters name from a function', () => {
     function a (b,c) { console.log(b, c) }
-    expect(getParameters(a)).toEqual(['b', 'c'])
+    expect(getFunctionParameters(a)).toEqual(['b', 'c'])
   })
 
   it('should return parameters name from a class method', () => {
@@ -12,7 +12,7 @@ describe('Get parameters', () => {
         console.log(b, c)
       }
     }
-    expect(getParameters(new Test().a)).toEqual(['b', 'c'])
+    expect(getFunctionParameters(new Test().a)).toEqual(['b', 'c'])
   })
 
   it('should return parameters name from a class static method', () => {
@@ -21,6 +21,6 @@ describe('Get parameters', () => {
         console.log(b, c)
       }
     }
-    expect(getParameters(Test.a)).toEqual(['b', 'c'])
+    expect(getFunctionParameters(Test.a)).toEqual(['b', 'c'])
   })
 })

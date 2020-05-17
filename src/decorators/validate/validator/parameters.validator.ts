@@ -10,8 +10,8 @@ function parseInternalMessages (messages: ValidationResponse[]): ValidatorRespon
   }
   return messages.map(value => ({
     property: value.key,
-    message: parseMessage(value.message, { key: value.key }),
-    internalMessages: parseInternalMessages(value.internalMessages)
+    description: parseMessage(value.description, { key: value.key }),
+    messages: parseInternalMessages(value.messages)
   }))
 }
 
@@ -19,13 +19,13 @@ export function validateParameters (properties: MethodProperty[], args: IArgumen
   const errors: ValidatorResponseError[] = []
   for (const property of properties) {
     const value = args[property.index]
-    const { valid, message, internalMessages = [] } = property.validator(property.key, value)
+    const { valid, description: message, messages: internalMessages = [] } = property.validator(property.key, value)
     if (!valid) {
       const { key } = property
       errors.push({
         property: key,
-        message: parseMessage(message, { key }),
-        internalMessages: parseInternalMessages(internalMessages)
+        description: parseMessage(message, { key }),
+        messages: parseInternalMessages(internalMessages)
       })
     }
   }

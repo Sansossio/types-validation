@@ -5,21 +5,21 @@ import { getClassParameters } from '../../../utils/get-class-parameters/get-clas
 export function validateSchemaValidator (key: string, type: any) {
   return function (value: any): ValidationResponse {
     let valid = true
-    const internalMessages: ValidationResponse[] = []
+    const messages: ValidationResponse[] = []
     const properties = getClassParameters(type)
     for (const property of properties) {
       const { key, validator } = property
       const result = validator(key, value?.[key])
       if (!result.valid) {
         valid = false
-        internalMessages.push(result)
+        messages.push(result)
       }
     }
     return {
       key,
       valid,
-      message: ValidatorsErrorMessages.VALIDATE_SCHEMA,
-      internalMessages
+      description: ValidatorsErrorMessages.VALIDATE_SCHEMA,
+      messages: messages
     }
   }
 }

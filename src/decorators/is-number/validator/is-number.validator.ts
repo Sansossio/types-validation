@@ -6,6 +6,6 @@ export function isNumberValidator (key: string, value: any): ValidationResponse 
   return {
     key,
     valid,
-    message: !valid && ValidatorsErrorMessages.IS_NUMBER
+    description: !valid && ValidatorsErrorMessages.IS_NUMBER
   }
 }

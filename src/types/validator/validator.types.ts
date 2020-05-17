@@ -7,6 +7,6 @@ export type ValidatorResponse = {
 export type ValidationResponse = {
   key: string
   valid: boolean
-  message?: string
-  internalMessages?: ValidationResponse[]
+  description?: string
+  messages?: ValidationResponse[]
 }

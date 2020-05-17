@@ -6,5 +6,5 @@ export type ValidatorResponse = {
 
 export type ValidationResponse = {
   valid: boolean
-  message?: string | string[]
+  message?: string
 }

@@ -6,5 +6,5 @@ import { getClassParameters } from '../get-class-parameters/get-class-parameters
 export function setClassProperty (value: ClassProperty, target: Object) {
   const properties = getClassParameters(target)
   properties.push(value)
-  Reflect.defineMetadata(Config.GET_CLASS_PROPERTIES, properties, target)
+  Reflect.defineMetadata(Config.GET_CLASS_PROPERTIES, properties, target.constructor)
 }

@@ -5,5 +5,5 @@ export type MethodProperty = {
   validator: MethodPropertyValidator
   index: number
   key: string
-  params: DecoratorParams
+  params?: DecoratorParams
 }

@@ -11,14 +11,14 @@ export function validateParameters (properties: MethodProperty[], args: IArgumen
     const {
       valid,
       description,
-      messages: internalMessages = []
+      messages = []
     } = property.validator(property.key, value)
     if (!valid) {
       const { key } = property
       errors.push({
         property: key,
         description: parseMessage(description, { key }),
-        messages: parseInternalMessages(internalMessages)
+        messages: parseInternalMessages(messages)
       })
     }
   }

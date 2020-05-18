@@ -3,7 +3,7 @@ import { registerProperty } from '../utils/register-property/register-property.u
 import { GenericOptions } from '../../types/generic-options/generic-options.types'
 import { DecoratorParams } from '../../types/decorator-params/decorator-params.types'
 
-export const IsNumber = function (options: GenericOptions) {
+export const IsNumber = function (options?: GenericOptions) {
   return function (target: Object, propertyKey: string | symbol, parameterIndex?: number) {
     const params: DecoratorParams = {
       target,

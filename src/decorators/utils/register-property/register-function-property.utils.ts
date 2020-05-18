@@ -2,8 +2,14 @@ import { getFunctionParamsName } from '../../../utils/get-function-params-name/g
 import { setFunctionProperty } from '../../../utils/set-function-property/set-function-property.utils'
 import { MethodProperty } from '../../../types/method-property/method-property.types'
 import { MethodPropertyValidator } from '../../../types/method-property/method-property.validator.types'
+import { DecoratorParams } from '../../../types/decorator-params/decorator-params.types'
 
-export function registerFunctionProperty (validator: MethodPropertyValidator, target: Object, propertyKey: string | symbol, parameterIndex?: number) {
+export function registerFunctionProperty (validator: MethodPropertyValidator, params: DecoratorParams) {
+  const {
+    propertyKey,
+    target,
+    parameterIndex
+  } = params
   const registerProperty: MethodProperty = {
     index: parameterIndex,
     validator,

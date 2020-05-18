@@ -16,6 +16,7 @@ describe('Properties validator', () => {
       index: 0,
       key: 'test',
       validator: () => ({
+        key: '',
         valid: true
       })
     }
@@ -28,6 +29,7 @@ describe('Properties validator', () => {
         index: 0,
         key: 'test',
         validator: () => ({
+          key: '',
           valid: true
         })
       },
@@ -35,6 +37,7 @@ describe('Properties validator', () => {
         index: 1,
         key: 'tes2',
         validator: () => ({
+          key: '',
           valid: false
         })
       }

@@ -13,7 +13,8 @@ export function registerFunctionProperty (validator: MethodPropertyValidator, pa
   const registerProperty: MethodProperty = {
     index: parameterIndex,
     validator,
-    key: getFunctionParamsName(target[propertyKey])[parameterIndex]
+    key: getFunctionParamsName(target[propertyKey])[parameterIndex],
+    params
   }
   setFunctionProperty(registerProperty, target, propertyKey)
 }

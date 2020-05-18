@@ -10,7 +10,8 @@ export const ValidateSchema = function (options?: ValidateSchemaOptions) {
     const params: DecoratorParams = {
       target,
       propertyKey,
-      parameterIndex
+      parameterIndex,
+      options
     }
     registerProperty(validateSchemaValidator(propertyKey, type), params)
   }

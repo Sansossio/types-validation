@@ -6,8 +6,6 @@ import { DecoratorParams } from '../../../types/decorator-params/decorator-param
 
 export function registerProperty (validator: MethodPropertyValidator, params: DecoratorParams) {
   const {
-    propertyKey,
-    target,
     parameterIndex
   } = params
   isClassProperty(parameterIndex) ?

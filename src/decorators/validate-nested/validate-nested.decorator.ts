@@ -4,15 +4,15 @@ import { ValidateSchemaOptions } from './validate-nested.options'
 import { validatorNestedGetType } from './validator/validator-nested.get-type'
 import { DecoratorParams } from '../../types/decorator-params/decorator-params.types'
 
-export const ValidateNested = function (options?: ValidateSchemaOptions) {
+export const ValidateNested = function (options: ValidateSchemaOptions = {}) {
   return function (target: Object, propertyKey: string, parameterIndex?: number) {
-    const type = options?.type || validatorNestedGetType(target, propertyKey, parameterIndex)
+    options.type = options?.type || validatorNestedGetType(target, propertyKey, parameterIndex)
     const params: DecoratorParams = {
       target,
       propertyKey,
       parameterIndex,
       options
     }
-    registerProperty(validateNestedValidator(propertyKey, type), params)
+    registerProperty(validateNestedValidator(propertyKey, options), params)
   }
 }

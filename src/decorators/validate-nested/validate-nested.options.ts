@@ -2,4 +2,8 @@ import { GenericOptions } from '../../types/generic-options/generic-options.type
 
 export type ValidateSchemaOptions = GenericOptions & {
   type?: any
+  /**
+   * Validate each value (array)
+   */
+  each?: boolean
 }

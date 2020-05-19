@@ -1,5 +1,6 @@
 export * from './validate/validate.decorator'
 export * from './validate-nested/validate-nested.decorator'
+export * from './common'
 export * from './strings'
 export * from './numbers'
 export * from './arrays'

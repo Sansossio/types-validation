@@ -2,7 +2,7 @@ import { MethodPropertyValidator } from '../method-property/method-property.vali
 import { DecoratorParams } from '../decorator-params/decorator-params.types'
 
 export type ClassProperty = {
-  key: string | symbol
+  key: string
   validator: MethodPropertyValidator
   params?: DecoratorParams
 }

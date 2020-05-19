@@ -4,7 +4,7 @@ import { GenericOptions } from '../../types/generic-options/generic-options.type
 import { isArrayValidator } from './validator/is-array.validator'
 
 export const IsArray = function (options?: GenericOptions) {
-  return function (target: Object, propertyKey: string | symbol, parameterIndex?: number) {
+  return function (target: Object, propertyKey: string, parameterIndex?: number) {
     const params: DecoratorParams = {
       target,
       propertyKey,

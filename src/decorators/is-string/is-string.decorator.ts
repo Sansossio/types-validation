@@ -4,7 +4,7 @@ import { DecoratorParams } from '../../types/decorator-params/decorator-params.t
 import { GenericOptions } from '../../types/generic-options/generic-options.types'
 
 export const IsString = function (options?: GenericOptions) {
-  return function (target: Object, propertyKey: string | symbol, parameterIndex?: number) {
+  return function (target: Object, propertyKey: string, parameterIndex?: number) {
     const params: DecoratorParams = {
       target,
       propertyKey,
